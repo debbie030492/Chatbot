@@ -5,27 +5,27 @@ positive_feeling = ["great","amazing","wonderful","fine","happy", "good"]
 positive_feeling_response = "Happy to hear ! Seeing you happy makes me happy too ! Where are you living ?"
 negative_feeling = ["bad","depressed","tired","sick","not", "sad"]
 negative_feeling_response = "Ohhh so sorry that you're having a bad day. I'll try to make it better. Where are you living ?"
-swearing_word = ["fuck","shit","ass","asshole", "whore", "slut"]
+swearing_word = ["fuck","shit","ass","asshole", "whore", "slut","bullshit","bitch"]
 swearing_word_response = "How you dare swear at me ? It's making me really mad to hear people swearing. Please be more polite. By the way ... tell me more about your hobbies."
 hello_welcome=["hey", "hi", "hello", "hay", "good morning"]
 hello_welcome_response = "Hey sweet pie. So happy to see you today."
-name_reply = ["ben", "benjamin", "nate", "nath", "nathaniel", "daniel", "lauren", "gilad", "omer", "deb", "deborah", "lior", "josh", "sylvie", "tanya"]
+name_reply = ["ben", "benjamin", "nate", "nath", "nathaniel", "daniel", "lauren", "gilad", "omer", "deb", "deborah", "lior", "josh", "sylvie", "tanya","gideon"]
 name_reply_response = "Long time we didn't speak together. How are you ?"
 goodbye_reply = ["bye", "see you", "goodbye"]
 goodbye_reply_response = "But I was having so much fun ... Please come back soon. XOXO"
-city_reply = ["tel", "aviv", "geneva", "paris", "jerusalem", "london", "madrid", "france", "israel", "switzerland", "poland"]
+city_reply = ["tel", "aviv", "geneva", "paris", "jerusalem", "london", "madrid", "france", "israel", "switzerland", "poland","amsterdam","mumbai","india","russia"]
 city_reply_response = "Amazing city. I wish I had legs to see all the amazing places the world provided us. What is the weather there ?"
-weather_reply = ["weather","rain","raining", "sun", "sky","meteo","sunny"]
+weather_reply = ["weather","rain","raining", "sun", "sky","meteo","sunny","hot","nice","cold","freezing"]
 weather_reply_response = "I'm a really bad weather forecast. Don't even bother asking me next time you want to know. Do you prefer hearing a funny or terrible joke ?"
-hobbies_reply = ["sport", "music", "beach", "painting", "running", "singing", "cooking", "sleeping", "reading"]
+hobbies_reply = ["sport", "music", "beach", "painting", "running", "singing", "cooking", "sleeping", "reading","tennis","basketball","programing","programming","shopping","coding"]
 hobbies_reply_response = "It's exciting ! Maybe one day I will learn too. What is your favorite fruit ?"
 joke_reply = ["joke", "funny", "laugh", "laughing", "jokes", "terrible"]
 joke_reply_response = "A user interface is like a joke. If you have to explain it, it's not that good."
 joke_answer = ["hahahaha","lmao", "ha", "haha", "hahaha", "hahahahaha", "lol"]
 joke_answer_response = "I knew you would love it ! Do you know any bad word ?"
-food_reply = ["avocado","apple","orange","nectarina","strawberries","melon","watermelon", "mango", "pear"]
+food_reply = ["avocado","apple","orange","nectarina","strawberries","melon","watermelon", "mango", "pear","banana","pineapple"]
 food_reply_response = "Mmmmmm seems tasty. Which I knew what's the taste of fruits. What's your favorite animal ? "
-animal_reply = ["dog", "cat", "dolphin", "horse", "fish"]
+animal_reply = ["dog", "cat", "dolphin", "horse", "fish","dragon","deer"]
 animal_reply_response = "So cool ! My favorite animal is dog ! What color do you hate the most ?"
 robot_reply = ["blue", "green", "red", "pink", "black", "white","purple"]
 robot_reply_response = "This is my favorite color. You broke my heart ... Any other question in mind ?"
@@ -34,8 +34,12 @@ questions = {
     "how old are you ?" : "Age has no meaning because I am virtual. Anyway it's not nice to ask someone his age.",
     "where do you live ?" : "Inside your computer. Just crash it on the floor and you will see me come out of it.",
     "where are you living ?": "Inside your computer. Just crash it on the floor and you will see me come out of it.",
+    "where are you from ?": "Inside your computer. Just crash it on the floor and you will see me come out of it.",
     "what is your name ?" : "My name is Boto and I am a chatbot. What is your name ?",
     "how are you ?" : "My mood depends on the humans surrounding me. How are you ?",
+    "how are you?" : "My mood depends on the humans surrounding me. How are you ?",
+    "how r u ?" : "My mood depends on the humans surrounding me. How are you ?",
+    "how r u ?" : "My mood depends on the humans surrounding me. How are you ?",
     "which languages do you speak ?" : "I'm so smart that I know all the languages you can think of. Just need to use Google Translate !",
     "what languages do you speak ?" : "I'm so smart that I know all the languages you can think of. Just need to use Google Translate !",
     "are you real ?" : "Depends what you mean by real. I'm talking to you no ? Is this real enough for you ?",
@@ -85,7 +89,7 @@ def message_key(message):
     if message in questions :
         return {"animation":"ok", "msg" : questions[message]}
 
-    return {"animation" : "afraid", "msg" : "I don't know what you are talking about. Can you explain it to me again ?"}
+    return {"animation" : "afraid", "msg" : "Tell me more ..."}
 
 
 @route('/', method='GET')
